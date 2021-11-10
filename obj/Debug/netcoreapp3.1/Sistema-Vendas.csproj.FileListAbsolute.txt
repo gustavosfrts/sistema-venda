@@ -1,0 +1,11 @@
+C:\Projetos\Sistema-Vendas\bin\Debug\netcoreapp3.1\Sistema-Vendas.exe
+C:\Projetos\Sistema-Vendas\bin\Debug\netcoreapp3.1\Sistema-Vendas.deps.json
+C:\Projetos\Sistema-Vendas\bin\Debug\netcoreapp3.1\Sistema-Vendas.runtimeconfig.json
+C:\Projetos\Sistema-Vendas\bin\Debug\netcoreapp3.1\Sistema-Vendas.runtimeconfig.dev.json
+C:\Projetos\Sistema-Vendas\bin\Debug\netcoreapp3.1\Sistema-Vendas.dll
+C:\Projetos\Sistema-Vendas\bin\Debug\netcoreapp3.1\Sistema-Vendas.pdb
+C:\Projetos\Sistema-Vendas\obj\Debug\netcoreapp3.1\Sistema-Vendas.csprojAssemblyReference.cache
+C:\Projetos\Sistema-Vendas\obj\Debug\netcoreapp3.1\Sistema-Vendas.AssemblyInfoInputs.cache
+C:\Projetos\Sistema-Vendas\obj\Debug\netcoreapp3.1\Sistema-Vendas.AssemblyInfo.cs
+C:\Projetos\Sistema-Vendas\obj\Debug\netcoreapp3.1\Sistema-Vendas.dll
+C:\Projetos\Sistema-Vendas\obj\Debug\netcoreapp3.1\Sistema-Vendas.pdb
