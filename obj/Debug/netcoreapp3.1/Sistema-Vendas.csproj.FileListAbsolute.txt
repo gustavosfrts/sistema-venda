@@ -9,3 +9,5 @@ C:\Projetos\Sistema-Vendas\obj\Debug\netcoreapp3.1\Sistema-Vendas.AssemblyInfoIn
 C:\Projetos\Sistema-Vendas\obj\Debug\netcoreapp3.1\Sistema-Vendas.AssemblyInfo.cs
 C:\Projetos\Sistema-Vendas\obj\Debug\netcoreapp3.1\Sistema-Vendas.dll
 C:\Projetos\Sistema-Vendas\obj\Debug\netcoreapp3.1\Sistema-Vendas.pdb
+C:\Projetos\Sistema-Vendas\obj\Debug\netcoreapp3.1\Sistema-Vendas.csproj.CoreCompileInputs.cache
+C:\Projetos\Sistema-Vendas\obj\Debug\netcoreapp3.1\Sistema-Vendas.genruntimeconfig.cache

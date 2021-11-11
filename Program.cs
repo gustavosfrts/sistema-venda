@@ -1,5 +1,6 @@
 ﻿using System;
 using Sistema_Vendas.Classes;
+using System.IO;
 
 namespace Sistema_Vendas
 {
@@ -17,6 +18,20 @@ namespace Sistema_Vendas
             {
                 case 1:
                     Produto produto = new Produto();
+                    FileStream produtoArquivo = new FileStream("C:\\Projetos\\Sistema-Vendas\\Arquivos\\produtos.txt", FileMode.Open, FileAccess.ReadWrite);
+                    StreamWriter sw = new StreamWriter(produtoArquivo);
+                    string str1 = produto.getNome();
+                    string str2 = produto.getQuantidade().ToString();
+                    string str3 = produto.getPreco().ToString();
+                    string str4 = produto.getTamanho();
+                    
+                    sw.WriteLine(str1);
+                    sw.WriteLine(str2);
+                    sw.WriteLine(str3);
+                    sw.WriteLine(str4);
+                    sw.Close();
+                    produtoArquivo.Close();
+
                     break;
                 case 2:
                     Cliente cliente = new Cliente();
