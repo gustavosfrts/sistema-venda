@@ -1,0 +1,4 @@
+1;Calça;3;120;M
+2;Camisa lisa;10;25;G
+3;Corta vento nike;20;499;G
+4;Peita da lost;298;150;M

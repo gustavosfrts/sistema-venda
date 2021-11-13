@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 namespace Sistema_Vendas.Classes
 {
@@ -11,6 +12,8 @@ namespace Sistema_Vendas.Classes
         private string tamanho;
         public Produto()
         {
+            Console.WriteLine("Informe o ID do produto: ");
+            this.setId(Int32.Parse(Console.ReadLine()));
             Console.WriteLine("Informe o nome do produto: ");
             this.setNome(Console.ReadLine());
             Console.WriteLine("Informe a quantidade de produtos a serem inseridos: ");
@@ -20,9 +23,33 @@ namespace Sistema_Vendas.Classes
             Console.WriteLine("Informe o tamanho da roupa: ");
             this.setTamanho(Console.ReadLine());
         }
-        public void setId()
+
+        public Produto(int id, string nome, int quantidade, float preco, string tamanho)
         {
-            this.id = 1;
+            this.setId(id);
+            this.setNome(nome);
+            this.setQuantidade(quantidade);
+            this.setPreco(preco);
+            this.setTamanho(tamanho);
+        }
+
+        public void cadastroProduto(Produto produto)
+        {
+            FileStream produtoArquivo = new FileStream("C:\\Projetos\\Sistema-Vendas\\Arquivos\\produtos.txt", FileMode.Append, FileAccess.Write);
+            StreamWriter swProduto = new StreamWriter(produtoArquivo);
+            
+            string strProduto = produto.getId() + ";" + produto.getNome() + ";" + produto.getQuantidade() + ";" + produto.getPreco() + ";" + produto.getTamanho();
+            swProduto.WriteLine(strProduto);
+            swProduto.Close();
+            produtoArquivo.Close();
+        }
+        public void setId(int id)
+        {
+            this.id = id;
+        }
+        public int getId()
+        {
+            return this.id;
         }
         public string getNome()
         {

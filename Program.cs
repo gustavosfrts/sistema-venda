@@ -18,27 +18,30 @@ namespace Sistema_Vendas
             {
                 case 1:
                     Produto produto = new Produto();
-                    FileStream produtoArquivo = new FileStream("C:\\Projetos\\Sistema-Vendas\\Arquivos\\produtos.txt", FileMode.Open, FileAccess.ReadWrite);
-                    StreamWriter sw = new StreamWriter(produtoArquivo);
-                    string str1 = produto.getNome();
-                    string str2 = produto.getQuantidade().ToString();
-                    string str3 = produto.getPreco().ToString();
-                    string str4 = produto.getTamanho();
-                    
-                    sw.WriteLine(str1);
-                    sw.WriteLine(str2);
-                    sw.WriteLine(str3);
-                    sw.WriteLine(str4);
-                    sw.Close();
-                    produtoArquivo.Close();
-
+                    produto.cadastroProduto(produto);
                     break;
+
                 case 2:
                     Cliente cliente = new Cliente();
+                    cliente.cadastroCliente(cliente);
                     break;
+
                 case 3:
                     Venda venda = new Venda();
+                    
+                    // string[] produtos = File.ReadAllLines("C:\\Projetos\\Sistema-Vendas\\Arquivos\\produtos.txt");
+                    // foreach (var p in produtos)
+                    // {
+                    //     Console.WriteLine(p.ToString());
+                    // }
+
+                    // string[] clientes = File.ReadAllLines("C:\\Projetos\\Sistema-Vendas\\Arquivos\\clientes.txt");
+                    // foreach (var c in clientes)
+                    // {
+                    //     Console.WriteLine(c.ToString());
+                    // }
                     break;
+
                 default:
                     Console.WriteLine("Opção incorreta. O aplicativo será encerrado.");
                     break;

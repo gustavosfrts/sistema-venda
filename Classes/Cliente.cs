@@ -1,10 +1,10 @@
 using System;
+using System.IO;
 
 namespace Sistema_Vendas.Classes
 {
     class Cliente
     {
-        private int id;
         private string nome;
         private string cpf;
         private DateTime dataNascimento;
@@ -19,6 +19,25 @@ namespace Sistema_Vendas.Classes
             this.setDataNascimento(DateTime.Parse(Console.ReadLine()));
             Console.WriteLine("Por favor, informe seu telefone: ");
             this.setTelefone(Console.ReadLine());
+        }
+
+        public Cliente(string nome, string cpf, DateTime dataNascimento, string telefone)
+        {
+            this.setNome(nome);
+            this.setCpf(cpf);
+            this.setDataNascimento(dataNascimento);
+            this.setTelefone(telefone);
+        }
+
+        public void cadastroCliente(Cliente cliente)
+        {
+            FileStream clienteArquivo = new FileStream("C:\\Projetos\\Sistema-Vendas\\Arquivos\\clientes.txt", FileMode.Append, FileAccess.Write);
+            StreamWriter swCliente = new StreamWriter(clienteArquivo);
+
+            string strCliente = cliente.getCpf() + ";" + cliente.getNome() + ";" + cliente.getTelefone() + ";" + cliente.getDataNascimento();
+            swCliente.WriteLine(strCliente);
+            swCliente.Close();
+            clienteArquivo.Close();
         }
 
         public string getNome()
