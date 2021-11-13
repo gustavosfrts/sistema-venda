@@ -43,6 +43,35 @@ namespace Sistema_Vendas.Classes
             swProduto.Close();
             produtoArquivo.Close();
         }
+
+        public void editarEstoque(string[] produtos)
+        {
+            string[] strProdutos = new string[produtos.Length];
+                    
+            for (int i = 0; i <= produtos.Length-1; i++)
+            {
+                string[] p = produtos[i].Split(";");
+                if (int.Parse(p[0]) == this.getId())
+                {
+                    strProdutos[i] = this.getId() + ";" + this.getNome() + ";" + this.getQuantidade() + ";" + this.getPreco() + ";" + this.getTamanho();
+                }
+                else
+                {
+                    strProdutos[i] = produtos[i];
+                }
+            }
+            
+            File.WriteAllText("C:\\Projetos\\Sistema-Vendas\\Arquivos\\produtos.txt", "");
+            FileStream produtoArquivo = new FileStream("C:\\Projetos\\Sistema-Vendas\\Arquivos\\produtos.txt", FileMode.Append, FileAccess.Write);
+            StreamWriter swProduto = new StreamWriter(produtoArquivo);
+            foreach (var p in strProdutos)
+            {    
+                swProduto.WriteLine(p);
+                Console.WriteLine(p.ToString());
+            }
+            swProduto.Close();
+            produtoArquivo.Close();
+        }
         public void setId(int id)
         {
             this.id = id;

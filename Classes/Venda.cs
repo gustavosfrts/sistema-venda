@@ -88,7 +88,6 @@ namespace Sistema_Vendas.Classes
                         string[] p = produtos[i].Split(";");
                         if (int.Parse(p[0]) == this.getIdProduto())
                         {
-                            Console.WriteLine(i);
                             strProdutos[i] = produtoCadastrado.getId() + ";" + produtoCadastrado.getNome() + ";" + produtoCadastrado.getQuantidade() + ";" + produtoCadastrado.getPreco() + ";" + produtoCadastrado.getTamanho();
                         }
                         else
@@ -103,7 +102,6 @@ namespace Sistema_Vendas.Classes
                     foreach (var p in strProdutos)
                     {    
                         swProduto.WriteLine(p);
-                        Console.WriteLine(p.ToString());
                     }
                     swProduto.Close();
                     produtoArquivo.Close();
