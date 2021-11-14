@@ -67,7 +67,6 @@ namespace Sistema_Vendas.Classes
             foreach (var p in strProdutos)
             {    
                 swProduto.WriteLine(p);
-                Console.WriteLine(p.ToString());
             }
             swProduto.Close();
             produtoArquivo.Close();

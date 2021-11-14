@@ -1,5 +1,1 @@
-1;Calça;10;120;M
-2;Camisa lisa;25;25;G
-3;Corta vento nike;20;499;G
-4;Peita da lost;298;150;M
-78;Camisa do Vasco;95;24990;G
+1;Camisa Lisa;25;50;G
